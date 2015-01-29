@@ -18,9 +18,13 @@ public class SimpleCalculator {
 		int choiceOfOperation;
 		
 		do{
-		System.out.println("Type integer corresponding to the operation you would like to perform.\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Modulus");
+		System.out.println("Type integer corresponding to the operation you would like to perform.\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Modulus\n6.Exit");
 		choiceOfOperation = sc.nextInt();
-		}while(choiceOfOperation < 1 && choiceOfOperation > 5);
+		} while(choiceOfOperation < 1 || choiceOfOperation > 6);
+		
+		if (choiceOfOperation == 6) {
+				System.exit(0);
+			}
 		
 		System.out.println("Type in the first number:  ");
 		firstNumber = sc.nextDouble ();
@@ -38,6 +42,6 @@ public class SimpleCalculator {
 				System.out.println(firstNumber / secondNumber);
 			} else if (choiceOfOperation == 5) {
 				System.out.println(firstNumber % secondNumber);
-			}
+			} 
 	}
 }
